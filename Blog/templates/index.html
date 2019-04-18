@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title> this is  test</title>
+</head>
+<body>
+
+<h1>{{content}}</h1>
+
+<ul>
+    {% for k,v in result %} <!--#循环-->
+    {% if forloop.counter|divisibleby:"2" %}  <!--#能否被2 整除-->
+        <li style="color: blue">{{k}},{{v}}</li>
+    {% else %}
+        <li style="color: red">{{k}},{{v}}</li>
+    {% endif %}
+
+    {% endfor %}
+</ul>
+
+<!--<ul>-->
+    <!--{% for k,v in result.items %} &lt;!&ndash;#循环&ndash;&gt;-->
+        <!--<li style='color:{{ forloop.counter|divisibleby:"2"|yesno:"red,blue" }}'>-->
+        <!--{{k}},{{v}}-->
+        <!--</li>-->
+    <!--{% endfor %}-->
+<!--</ul>-->
+
+
+</body>
+</html>
